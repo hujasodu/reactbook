@@ -12,8 +12,20 @@
     <script src="react/react-dom.js"></script>
     <script>
     ReactDOM.render(
-        React.createElement('h1', null, 'Hello world!'),
+        React.createElement(
+        'h1',
+        {id: 'my-heading'},
+        React.createElement(
+            'span',
+            null,
+            'Hello ',
+            React.createElement('em', null, 'Wonderful'),
+        ),
+        ' world!'
+        ),
         document.getElementById('app')
+
+        
     );
     </script>
   </body>
